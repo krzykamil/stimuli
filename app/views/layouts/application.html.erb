@@ -12,17 +12,25 @@
   </head>
 
   <body>
-  <ul>
-    <li>
-      <a href="/playgrounds?showcase=checklist">Checklist</a>
-    </li>
-    <li>
-      <a href="/playgrounds?showcase=clipboard">Clipboard</a>
-    </li>
-    <li>
-      <a href="/playgrounds?showcase=counter">Counter</a>
-    </li>
-  </ul>
-    <%= yield %>
+  <main class="grid min-h-screen place-content-center place-items-center overflow-hidden bg-gradient-to-b from-blue-900 to-slate-900 text-white">
+    <div id="main_container"class="relative grid place-content-center place-items-center gap-2 before:bg-gradient-to-t before:from-teal-500/70 before:via-fuchsia-600 before:to-transparent before:blur-xl before:filter">
+      <ul>
+        <li>
+          <a href="/playgrounds?showcase=checklist">Checklist</a>
+        </li>
+        <li>
+          <a href="/playgrounds?showcase=clipboard">Clipboard</a>
+        </li>
+        <li>
+          <a href="/playgrounds?showcase=counter">Counter</a>
+        </li>
+      </ul>
+      <%= yield %>
+    </div>
+
+
+  </main>
+
+
   </body>
 </html>

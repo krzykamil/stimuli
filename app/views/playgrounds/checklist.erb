@@ -1,0 +1,22 @@
+<div class="mt-6 sm:col-span-2" data-controller="checkbox-list">
+  <div class="max-w-lg space-y-4">
+    <% options = [["Brug", "Is free and fun and sweet"], ["Stimulus", "Stimulates your page with JS"], ["Hotwire", "Is hot and is a wire, with stimulus inside"]]%>
+    <% options.each do |name, desc| %>
+      <div class="relative flex items-start">
+        <div class="absolute flex items-center h-5">
+          <input id="<%= name %>" name="<%= name %>" type="checkbox" data-checkbox-list-target="checkbox" class="form-checkbox h-4 w-4 transition duration-150 ease-in-out" />
+        </div>
+        <div class="pl-7 text-sm leading-5">
+          <label for="<%= name %>" class="font-medium"><%= name %></label>
+          <p class="text-xs"><%= desc %>.</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="text-xs mt-4 mx-7">
+    <button class="flex px-3 py-2 bg-blue-400 mr-1 font-semibold rounded" data-action="checkbox-list#checkAll">Check all</button>
+    <span class="mx-1">&middot;</span>
+    <button class="flex px-3 py-2 bg-red-400 mr-1 font-semibold rounded" data-action="checkbox-list#checkNone">Check none</button>
+  </div>
+</div>
+<script src="https://gist.github.com/krzykamil/e4627f36aca2e70d86382e93a1692e3b.js"></script>
