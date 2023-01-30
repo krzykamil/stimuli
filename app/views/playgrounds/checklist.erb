@@ -1,5 +1,5 @@
-<div class="mt-6 sm:col-span-2" data-controller="checkbox-list">
-  <div class="max-w-lg space-y-4">
+<div data-controller="checkbox-list">
+  <div class="space-y-4">
     <% options = [["Brug", "Is free and fun and sweet"], ["Stimulus", "Stimulates your page with JS"], ["Hotwire", "Is hot and is a wire, with stimulus inside"]]%>
     <% options.each do |name, desc| %>
       <div class="relative flex items-start">
@@ -13,10 +13,10 @@
       </div>
     <% end %>
   </div>
-  <div class="text-xs mt-4 mx-7">
+  <div class="mb-4 text-xs mt-4 mx-7 flex flex-row">
     <button class="flex px-3 py-2 bg-blue-400 mr-1 font-semibold rounded" data-action="checkbox-list#checkAll">Check all</button>
-    <span class="mx-1">&middot;</span>
     <button class="flex px-3 py-2 bg-red-400 mr-1 font-semibold rounded" data-action="checkbox-list#checkNone">Check none</button>
   </div>
+  <script src="https://gist.github.com/krzykamil/e4627f36aca2e70d86382e93a1692e3b.js"></script>
 </div>
-<script src="https://gist.github.com/krzykamil/e4627f36aca2e70d86382e93a1692e3b.js"></script>
+

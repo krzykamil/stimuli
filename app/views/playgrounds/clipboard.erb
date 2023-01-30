@@ -1,17 +1,21 @@
-<div data-controller="clipboard" class="mt-4 bg-gray-50 p-6">
-  <input type="text" class="form-input bg-grey-50" value="SeCrEtKeY-42!" data-clipboard-target="source" readonly />
+<div>
+  <div data-controller="clipboard" class="flex flex-row mt-4 p-6">
+    <input type="text" class="form-input text-black" value="SeCrEtKeY-42!" data-clipboard-target="source" readonly />
 
-  <button class="btn" data-clipboard-target="button" data-action="clipboard#copy">
-    Copy
-  </button>
+    <button class="mx-4 flex px-3 py-2 bg-slate-900 font-semibold rounded" data-clipboard-target="button" data-action="clipboard#copy">
+      Copy
+    </button>
+  </div>
+
+  <div data-controller="clipboard" class="flex flex-row mt-4 p-6">
+    <input type="text" class="form-input text-black" value="BRUG" data-clipboard-target="source" readonly />
+
+    <button class="mx-4 flex px-3 py-2 bg-slate-900 font-semibold rounded" data-clipboard-target="button" data-action="clipboard#copy">
+      Copy
+    </button>
+  </div>
+
+  <input type="text" class="my-4 text-black form-input" value="" placeholder="Test here" data-clipboard-target="source" />
+
+  <script src="https://gist.github.com/krzykamil/5e90208b22cdbcdd2e45ec1f677ab6c8.js"></script>
 </div>
-
-<div data-controller="clipboard" class="mt-4 bg-gray-50 p-6">
-  <input type="text" class="form-input bg-grey-50" value="BRUG" data-clipboard-target="source" readonly />
-
-  <button class="btn" data-clipboard-target="button" data-action="clipboard#copy">
-    Copy
-  </button>
-</div>
-
-<input type="text" class="form-input bg-grey-50" value="" data-clipboard-target="source" />
