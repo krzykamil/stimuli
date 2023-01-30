@@ -6,9 +6,10 @@ class PlaygroundsController < ApplicationController
 
   def show
     case params[:showcase]
-      when 'clipboard' then 'playgrounds/clipboard'
-      when 'counter' then 'playgrounds/counter'
-      when 'checklist' then 'playgrounds/checklist'
+    when 'clipboard' then render 'playgrounds/clipboard'
+    when 'counter' then render 'playgrounds/counter'
+    when 'checklist' then render 'playgrounds/checklist'
+    else "playgrounds/index"
     end
   end
 end

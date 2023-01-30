@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root "playgrounds#index"
 
-  resources :playgrounds, only: [:index, :show]
+  resource :playgrounds, only: [:index, :show], param: :showcase
 end
