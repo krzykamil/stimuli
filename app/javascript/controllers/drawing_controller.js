@@ -10,17 +10,16 @@ export default class extends Controller {
     this.drawingContext.lineWidth = 5;
   }
 
-  lineX(event) {
+  drawLine(event) {
+    console.log(event.params)
     this.drawingContext.beginPath();
-    this.drawingContext.moveTo(100, 100);
-    this.drawingContext.lineTo(300, 100);
-    this.drawingContext.stroke();
-  }
-
-  lineY() {
-    this.drawingContext.beginPath();
-    this.drawingContext.moveTo(100, 100);
-    this.drawingContext.lineTo(100, 300);
+    this.drawingContext.moveTo(event.params.x, event.params.y);
+    if (event.params.direction === 'horizontal') {
+      this.drawingContext.lineTo(event.params.length, event.params.y);
+    } else {
+      this.drawingContext.lineTo(event.params.x, event.params.length);
+    }
+    this.drawingContext.lineTo(event.params.x, event.params.lengthY);
     this.drawingContext.stroke();
   }
 }
